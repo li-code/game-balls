@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #454545 url("images/game-bg.png") repeat;
+}
+
+.game {
+    display: flex;
+}
+
+.game__sidebar {
+    margin-top: 10vh;
+}
+
+.grid {
+    margin: 10vh;
+    display: grid;
+    grid-gap: 1%;
+    width: 80vh;
+    height: 80vh;
+}
+
+.grid[data-columns="9"] {
+    grid-template-columns: repeat(9, 1fr);
+}
+.grid[data-rows="9"] {
+    grid-template-rows: repeat(9, 1fr);
+}
+
+.grid__cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: hsl(0, 0%, 40%);
+    border-radius: 10%;
+
+    transition: background .15s ease-in;
+    cursor: pointer;
+}
+
+.grid__cell.is-selected,
+.grid__cell:hover {
+    background-color: hsl(0, 0%, 60%);
+}
+
+.ball {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+.ball[data-color="1"] {
+    color: blue;
+}
+.ball[data-color="2"] {
+    color: green;
+}
+.ball[data-color="3"] {
+    color: grey;
+}
+.ball[data-color="4"] {
+    color: orange;
+}
+.ball[data-color="5"] {
+    color: purple;
+}
+.ball[data-color="6"] {
+    color: tomato;
+}
+.ball[data-color="7"] {
+    color: yellow;
+}
+.ball[data-color="8"] {
+    color: magenta;
+}
+.ball[data-color="9"] {
+    color: brown;
+}
+
+.score {
+    margin: 0;
+    padding: 0;
+    font-size: 72px;
+    color: hsl(0, 0%, 100%);
+}
